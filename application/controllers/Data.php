@@ -24,7 +24,7 @@ class Data extends MY_Controller {
                 'from_tgl' => !empty_or_null($from_tgl) ? set_date($from_tgl) : null,
                 'to_tgl' => !empty_or_null($to_tgl) ? set_date($to_tgl) : (!empty_or_null($from_tgl) ? set_date($from_tgl) : null),
             );
-            return print_r($this->data_model->get_all_dt($filter));
+            return print_r($this->Banksoal_model->get_all_dt($filter));
         } else {
             $this->render('data/index');
         }
@@ -60,6 +60,7 @@ class Data extends MY_Controller {
     public function save($id = null) {
         $is_add_state = is_null($id);
         $data = $this->_fetch_data($is_add_state);
+        $dd($data);
         if ($is_add_state) {
             $is_success = $this->Banksoal_model->insert($data);
         } else {
@@ -69,7 +70,7 @@ class Data extends MY_Controller {
         if ($is_success) set_flash_message("Data telah tersimpan.");
         else set_flash_message("Data gagal tersimpan.", 'error');
 
-        if ($is_add_state) redirect(base_url('data/create'));
+        if ($is_add_state) redirect(base_url('data/inputsoal'));
         else redirect(base_url('data'));
     }
 

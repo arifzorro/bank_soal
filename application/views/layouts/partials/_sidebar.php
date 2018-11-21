@@ -2,8 +2,8 @@
     <div class="menu_section">
         <ul class="nav side-menu">
             <li>
-                <a href="<?php route('data/create'); ?>">
-                    <i class="fa fa-upload"></i> Input Data
+                <a href="<?php route('data/inputsoal'); ?>">
+                    <i class="fa fa-upload"></i> Input Soal
                 </a>
             </li>
 

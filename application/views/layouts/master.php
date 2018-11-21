@@ -25,7 +25,7 @@
                 <div class="navbar nav_title" style="border: 0;">
                     <a href="#" class="site_title">
                         <i class="fa fa-paw"></i>
-                        <span class="m-l-5">Input Meteran</span>
+                        <span class="m-l-5">BAKSO V0.1</span>
                     </a>
                 </div>
 

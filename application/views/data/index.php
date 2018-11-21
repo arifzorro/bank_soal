@@ -10,7 +10,7 @@
                 <div class="header-panel">
                     <form class="filter-table form-inline hidden-xs">
                         <div class="form-group">
-                            <label class="control-label">Tgl Ganti</label>
+                            <label class="control-label">Tgl Input Soal</label>
                             <input name="from_tgl" type="text" class="datepicker from_tgl form-control input-sm">
                         </div>
                         <div class="form-group">
@@ -31,17 +31,16 @@
                         <tr>
                             <th>No</th>
                             <th>Action</th>
-                            <th>Nama Vendor</th>
-                            <th>Tanggal Ganti</th>
-                            <th>ID Pelanggan</th>
-                            <th>No. Telpon Pel.</th>
-                            <th>SN Meter Baru</th>
-                            <th>Merk Meter Lama</th>
-                            <th>No Seri Meter Lama</th>
-                            <th>Tahun Meter Lama</th>
-                            <th>Stan Bongkar</th>
-                            <th>Nomer Segel</th>
+                            <th>Tanggal Input</th>
+                            <th>ID soal</th>
+                            <th>Soal</th>
+                            <th>Pilihan A</th>
+                            <th>Pilihan B</th>
+                            <th>Pilihan C</th>
+                            <th>Pilihan D</th>
+                            <th>Pilihan E</th>
                             <th>Pelaksana</th>
+                            <th>insert_by</th>
                         </tr>
                     </thead>
                     <tbody>
