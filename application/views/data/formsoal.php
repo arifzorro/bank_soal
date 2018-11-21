@@ -24,22 +24,57 @@
                     <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Tanggal create
                     </label>
                     <div class="col-md-3 col-sm-3 col-xs-12">
-                        <input value="<?php show_ifset($data->tgl_ganti, date('d-m-Y'), true); ?>" type="text" name="tgl_ganti" required class="datepicker form-control col-md-7 col-xs-12">
+                        <input value="<?php show_ifset($bank_soal->tanggal, date('d-m-Y'), true); ?>" type="text" name="tanggal" required class="datepicker form-control col-md-7 col-xs-12">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">soal</label>
                     <div class="col-md-6 col-sm-6 col-xs-12">
-                        <textarea class="form-control" rows="5" id="soal" required></textarea>
-
-                        <!--  <input value="--><?php //show_ifset($data->pelanggan_id); ?><!--"-->
-<!--                               class="form-control col-md-7 col-xs-12"-->
-<!--                               type="text" name="pelanggan_id" required>-->
-
+                        <textarea value="<?php show_ifset($bank_soal->soal);?>" class="form-control" rows="5" name="soal" required></textarea>
                     </div>
                 </div>
-
+                <div class="form-group">
+                    <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">pilihan A</label>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <input value="<?php show_ifset($bank_soal->a);?>"
+                               class="form-control col-md-7 col-xs-12"
+                               type="text" name="a" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">pilihan B</label>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <input value="<?php show_ifset($bank_soal->b);?>"
+                               class="form-control col-md-7 col-xs-12"
+                               type="text" name="b" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">pilihan C</label>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <input value="<?php show_ifset($bank_soal->c);?>"
+                               class="form-control col-md-7 col-xs-12"
+                               type="text" name="c" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">pilihan D</label>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <input value="<?php show_ifset($bank_soal->d);?>"
+                               class="form-control col-md-7 col-xs-12"
+                               type="text" name="d" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">pilihan E</label>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <input value="<?php show_ifset($bank_soal->e);?>"
+                               class="form-control col-md-7 col-xs-12"
+                               type="text" name="e" required>
+                    </div>
+                </div>
 <!--                <div class="form-group">-->
+<!--                    <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">No Telp. Pelanggan</label>-->
 <!--                    <div class="col-md-6 col-sm-6 col-xs-12">-->
 <!--                        <input value="--><?php //show_ifset($data->pelanggan_telepon); ?><!--"-->
 <!--                               class="form-control col-md-7 col-xs-12"-->
@@ -47,51 +82,7 @@
 <!--                    </div>-->
 <!--                </div>-->
 
-                <div class="form-group">
-                    <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">pilihan A</label>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input value="<?php show_ifset($data->sn_meter_baru);?>"
-                               class="form-control col-md-7 col-xs-12"
-                               type="text" name="sn_meter_baru" required>
-                    </div>
-                </div>
 
-
-                <div class="form-group">
-                    <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">pilihan B</label>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input value="<?php show_ifset($data->seri_meter_lama); ?>"
-                               class="form-control col-md-7 col-xs-12"
-                               type="text" name="seri_meter_lama" required>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">pilihan C</label>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input value="<?php show_ifset($data->tahun_meter_lama); ?>"
-                               class="form-control col-md-7 col-xs-12"
-                               type="text" name="tahun_meter_lama" required>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">pilihan D</label>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input value="<?php show_ifset($data->stan_bongkar); ?>"
-                               class="form-control col-md-7 col-xs-12"
-                               type="text" name="stan_bongkar" required>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">pilihan E</label>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input value="<?php show_ifset($data->no_segel); ?>"
-                               class="form-control col-md-7 col-xs-12"
-                               type="text" name="no_segel" required>
-                    </div>
-                </div>
 
                 <div class="form-group">
                     <label class="control-label col-md-3 col-sm-3 col-xs-12">Pelaksana <span class="required">*</span>

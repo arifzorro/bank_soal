@@ -8,5 +8,18 @@ class Banksoal_model extends MY_Model {
     public function __construct() {
         parent::__construct();
     }
-
+    public $fillable = array(
+        'id_soal',
+        'soal',
+        'a',
+        'b',
+        'c',
+        'd',
+        'e',
+        'tanggal',
+        'jenis',
+        'pelaksana',
+        'insert_by',
+        'created_at'
+    );
 }

@@ -50,8 +50,10 @@ class Data extends MY_Controller {
 
     public function _fetch_data($is_add_state) {
         $data = $this->input->post();
-        $data['tgl_ganti'] = set_date($data['tgl_ganti']);
+
+        $data['tanggal'] = set_date($data['tanggal']);
         $data = array_merge($data, user_timestamps($is_add_state));
+       // dd($data);
         return $data;
     }
 
@@ -59,9 +61,9 @@ class Data extends MY_Controller {
         $is_add_state = is_null($id);
         $data = $this->_fetch_data($is_add_state);
         if ($is_add_state) {
-            $is_success = $this->data_model->insert($data);
+            $is_success = $this->Banksoal_model->insert($data);
         } else {
-            $is_success = $this->data_model->update($data, $id);
+            $is_success = $this->banksoal_model->update($data, $id);
         }
 
         if ($is_success) set_flash_message("Data telah tersimpan.");
