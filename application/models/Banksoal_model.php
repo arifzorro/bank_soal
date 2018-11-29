@@ -8,6 +8,7 @@ class Banksoal_model extends MY_Model {
     public function __construct() {
         parent::__construct();
     }
+    //bawaan my model plugin
     public $fillable = array(
         'id_soal',
         'soal',
@@ -30,7 +31,7 @@ class Banksoal_model extends MY_Model {
             d.tanggal, d.jenis, d.pelaksana,
         ")
             ->from("$this->table d")
-            ->edit_column('tgl_ganti', '$1', "show_date(tgl_ganti)")
+            ->edit_column('tanggal', '$1', "show_date(tanggal)")
             ->add_column('action', '$1', "set_actions(id, data)");
 
         if (!is_null($filter->from_tgl)) {

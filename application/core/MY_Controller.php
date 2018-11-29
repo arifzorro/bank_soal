@@ -18,9 +18,9 @@ class MY_Controller extends CI_Controller{
      * 
      */
     private function load_layout($view = "", $view_data = [], $layout = "", $return = FALSE) {
-        var_dump($view);
-        var_dump($view_data);
-        var_dump($layout);
+        //var_dump($view);
+        //var_dump($view_data);
+        //var_dump($layout);
 
         // set view data
         $data = empty($view_data) ? $this->data : $view_data;

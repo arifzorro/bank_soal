@@ -24,19 +24,19 @@
                     <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Tanggal create
                     </label>
                     <div class="col-md-3 col-sm-3 col-xs-12">
-                        <input value="<?php show_ifset($bank_soal->tanggal, date('d-m-Y'), true); ?>" type="text" name="tanggal" required class="datepicker form-control col-md-7 col-xs-12">
+                        <input value="<?php show_ifset($data->tanggal, date('d-m-Y'), true); ?>" type="text" name="tanggal" required class="datepicker form-control col-md-7 col-xs-12">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">soal</label>
                     <div class="col-md-6 col-sm-6 col-xs-12">
-                        <textarea value="<?php show_ifset($bank_soal->soal);?>" class="form-control" rows="5" name="soal" required></textarea>
+                        <textarea value="<?php show_ifset($data->soal);?>" class="form-control" rows="5" name="soal" required></textarea>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">pilihan A</label>
                     <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input value="<?php show_ifset($bank_soal->a);?>"
+                        <input value="<?php show_ifset($data->a);?>"
                                class="form-control col-md-7 col-xs-12"
                                type="text" name="a" required>
                     </div>

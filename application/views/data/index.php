@@ -40,7 +40,7 @@
                             <th>Pilihan D</th>
                             <th>Pilihan E</th>
                             <th>Pelaksana</th>
-                            <th>insert_by</th>
+<!--                            <th>insert_by</th>-->
                         </tr>
                     </thead>
                     <tbody>
@@ -61,5 +61,5 @@
     <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.flash.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.html5.min.js"></script>
-    <script src="<?php assets('js/data.js') ?>"></script>
+    <script src="<?php assets('js/datamodif.js') ?>"></script>
 </js>

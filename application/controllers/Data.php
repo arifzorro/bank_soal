@@ -17,6 +17,7 @@ class Data extends MY_Controller {
     }
 
     public function index() {
+
         if ($this->input->is_ajax_request()) {
             $from_tgl   = $this->input->post('from_tgl');
             $to_tgl     = $this->input->post('to_tgl');
@@ -32,7 +33,7 @@ class Data extends MY_Controller {
 
     public function create() {
         $this->data['vendor'] = $this->vendor_model->get(1);
-        var_dump($this->vendor_model->get(1));
+        //var_dump($this->vendor_model->get(1));
         $this->render('data/form');
     }
     public function inputsoal(){
@@ -43,9 +44,17 @@ class Data extends MY_Controller {
     }
 
     public function edit($id) {
-        $this->data['data'] = $this->data_model->with_vendor()->get($id);
-        $this->data['vendor'] = $this->data['data']->vendor;
-        $this->render('data/form');
+        //CODE RAMA
+//        $this->data['data'] = $this->data_model->with_vendor()->get($id);
+//        $this->data['vendor'] = $this->data['data']->vendor;
+//        $this->render('data/formsoal');
+        var_dump($id);
+        //maksudnya
+        $this->data['data'] = $this->Banksoal_model->get($id);
+        var_dump($this->data['data']);
+        //$this->data['vendor'] = $this->data['data']->vendor;
+        //var_dump($this->data['vendor']);
+        $this->render('data/formsoal');
     }
 
     public function _fetch_data($is_add_state) {
@@ -60,7 +69,7 @@ class Data extends MY_Controller {
     public function save($id = null) {
         $is_add_state = is_null($id);
         $data = $this->_fetch_data($is_add_state);
-        $dd($data);
+       // $dd($data);
         if ($is_add_state) {
             $is_success = $this->Banksoal_model->insert($data);
         } else {

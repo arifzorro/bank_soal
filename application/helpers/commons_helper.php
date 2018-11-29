@@ -58,6 +58,7 @@ if (! function_exists('mix')) {
 //            if (! file_exists($manifestPath = ($rootPath . $manifestDirectory.'/mix-manifest.json') )) {
 //                throw new Exception('The Mix manifest does not exist.');
 //            }
+            //ini sy tambahkan sendiri aslinya diatas
             if (! file_exists($manifestPath = ($rootPath . $manifestDirectory.'/ganti-meter/public/mix-manifest.json') )) {
                 throw new Exception('The Mix manifest does not exist.');
             }
