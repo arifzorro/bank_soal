@@ -30,7 +30,7 @@
                 <div class="form-group">
                     <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">soal</label>
                     <div class="col-md-6 col-sm-6 col-xs-12">
-                        <textarea value="<?php show_ifset($data->soal);?>" class="form-control" rows="5" name="soal" required></textarea>
+                        <textarea value="" class="form-control" rows="5" name="soal" required><?php show_ifset($data->soal);?></textarea>
                     </div>
                 </div>
                 <div class="form-group">
@@ -44,7 +44,7 @@
                 <div class="form-group">
                     <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">pilihan B</label>
                     <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input value="<?php show_ifset($bank_soal->b);?>"
+                        <input value="<?php show_ifset($data->b);?>"
                                class="form-control col-md-7 col-xs-12"
                                type="text" name="b" required>
                     </div>
@@ -52,7 +52,7 @@
                 <div class="form-group">
                     <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">pilihan C</label>
                     <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input value="<?php show_ifset($bank_soal->c);?>"
+                        <input value="<?php show_ifset($data->c);?>"
                                class="form-control col-md-7 col-xs-12"
                                type="text" name="c" required>
                     </div>
@@ -60,7 +60,7 @@
                 <div class="form-group">
                     <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">pilihan D</label>
                     <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input value="<?php show_ifset($bank_soal->d);?>"
+                        <input value="<?php show_ifset($data->d);?>"
                                class="form-control col-md-7 col-xs-12"
                                type="text" name="d" required>
                     </div>
@@ -68,7 +68,7 @@
                 <div class="form-group">
                     <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">pilihan E</label>
                     <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input value="<?php show_ifset($bank_soal->e);?>"
+                        <input value="<?php show_ifset($data->e);?>"
                                class="form-control col-md-7 col-xs-12"
                                type="text" name="e" required>
                     </div>
