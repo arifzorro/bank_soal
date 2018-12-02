@@ -21,6 +21,7 @@ class Banksoal_model extends MY_Model {
         'jenis',
         'pelaksana',
         'insert_by',
+        'updated_at',
         'created_at'
     );
 
@@ -32,7 +33,7 @@ class Banksoal_model extends MY_Model {
         ")
             ->from("$this->table d")
             ->edit_column('tanggal', '$1', "show_date(tanggal)")
-            ->add_column('action', '$1', "set_actions(id, data)");
+            ->add_column('action', '$1', "set_actions(id_soal, data)");//langsung pake nama field di database dengan id_soal
 
         if (!is_null($filter->from_tgl)) {
             $this->datatables->where("d.tgl_ganti >= '$filter->from_tgl'");

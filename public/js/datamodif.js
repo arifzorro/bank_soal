@@ -49,6 +49,7 @@ var table = $('#table_data').DataTable({
 
 $('body').on('click', '.action_btn_edit', function () {
     window.location = $(this).data('url');
+    //console.log("tes doank".window.location);
 });
 
 $('body').on('click', '.action_btn_delete', function () {

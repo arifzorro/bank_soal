@@ -91,7 +91,7 @@ class MY_Model extends CI_Model
      * @var null
      * Sets PRIMARY KEY
      */
-    public $primary_key = 'id';
+    public $primary_key = 'id_soal';
 
     /**
      * @var null|array
@@ -668,6 +668,7 @@ class MY_Model extends CI_Model
             }
 
         }
+        //dd($this);
        // var_dump($this);
         return $this;
     }
@@ -905,7 +906,7 @@ class MY_Model extends CI_Model
             }
             if(isset($where))
             {
-                //echo 'akses';
+
                 $this->where($where);
             }
             if($this->soft_deletes===TRUE)
@@ -913,10 +914,12 @@ class MY_Model extends CI_Model
                 $this->_where_trashed();
             }
             $this->limit(1);
+
             $query = $this->_database->get($this->table);
             $this->_reset_trashed();
             if ($query->num_rows() == 1)
             {
+
                 $row = $query->row_array();
                 $row = $this->trigger('after_get', $row);
                 $row =  $this->_prep_after_read(array($row),FALSE);

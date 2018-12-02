@@ -44,14 +44,15 @@ class Data extends MY_Controller {
     }
 
     public function edit($id) {
+        //dd($id);
         //CODE RAMA
 //        $this->data['data'] = $this->data_model->with_vendor()->get($id);
 //        $this->data['vendor'] = $this->data['data']->vendor;
 //        $this->render('data/formsoal');
-        var_dump($id);
+       //var_dump($id);
         //maksudnya
-        $this->data['data'] = $this->Banksoal_model->get($id);
-        var_dump($this->data['data']);
+       $this->data['data'] = $this->Banksoal_model->get($id);
+      //  var_dump($this->data['data']);
         //$this->data['vendor'] = $this->data['data']->vendor;
         //var_dump($this->data['vendor']);
         $this->render('data/formsoal');
@@ -70,13 +71,16 @@ class Data extends MY_Controller {
         $is_add_state = is_null($id);
         $data = $this->_fetch_data($is_add_state);
        // $dd($data);
+       //   dd($id);
+        //dd($is_add_state);
         if ($is_add_state) {
+
             $is_success = $this->Banksoal_model->insert($data);
         } else {
-            $is_success = $this->banksoal_model->update($data, $id);
+            $is_success = $this->Banksoal_model->update($data, $id);
         }
-
-        if ($is_success) set_flash_message("Data telah tersimpan.");
+        var_dump('akses');
+        if ($is_success) set_flash_message( "Data telah tersimpan.");
         else set_flash_message("Data gagal tersimpan.", 'error');
 
         if ($is_add_state) redirect(base_url('data/inputsoal'));
@@ -84,7 +88,7 @@ class Data extends MY_Controller {
     }
 
     public function delete($id) {
-        $success = $this->data_model->delete(array('id' => $id));
+        $success = $this->Banksoal_model->delete(array('id_soal' => $id));
         if ($success === FALSE) {
             return NULL;
         } else {

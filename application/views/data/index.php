@@ -21,7 +21,7 @@
                             <button id="refresh_filter" class="refresh_filter_data btn btn-primary btn-sm" type="button">Refresh</button>
                         </div>
                     </form>
-                    <a href="<?php route('data/create'); ?>" class="btn btn-success btn-sm pull-right" style="margin-bottom: 0px"><i class="fa fa-plus-circle"></i> Input Baru</a>
+                    <a href="<?php route('data/inputsoal'); ?>" class="btn btn-success btn-sm pull-right" style="margin-bottom: 0px"><i class="fa fa-plus-circle"></i> Input Baru</a>
                 </div>
                 <div class="clearfix"></div>
             </div>
