@@ -42,6 +42,7 @@ var table = $('#table_data').DataTable({
         {"data": "c"},
         {"data": "d"},
         {"data": "e"},
+        {"data": "kategori"},
         {"data": "pelaksana"},
 
     ]

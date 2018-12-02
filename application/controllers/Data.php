@@ -63,13 +63,14 @@ class Data extends MY_Controller {
 
         $data['tanggal'] = set_date($data['tanggal']);
         $data = array_merge($data, user_timestamps($is_add_state));
-       // dd($data);
+        //dd($data);
         return $data;
     }
 
     public function save($id = null) {
         $is_add_state = is_null($id);
         $data = $this->_fetch_data($is_add_state);
+        //$kategori=$_POST['']
        // $dd($data);
        //   dd($id);
         //dd($is_add_state);

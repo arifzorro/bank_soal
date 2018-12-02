@@ -39,7 +39,10 @@
                             <th>Pilihan C</th>
                             <th>Pilihan D</th>
                             <th>Pilihan E</th>
+                            <th>kategori</th>
                             <th>Pelaksana</th>
+
+
 <!--                            <th>insert_by</th>-->
                         </tr>
                     </thead>

@@ -18,7 +18,7 @@ class Banksoal_model extends MY_Model {
         'd',
         'e',
         'tanggal',
-        'jenis',
+        'kategori',
         'pelaksana',
         'insert_by',
         'updated_at',
@@ -29,7 +29,7 @@ class Banksoal_model extends MY_Model {
     public function get_all_dt($filter) {
         $this->datatables->select("
             d.id_soal, d.soal, d.a, d.b, d.c, d.d, d.e,
-            d.tanggal, d.jenis, d.pelaksana,
+            d.tanggal, d.pelaksana,d.kategori
         ")
             ->from("$this->table d")
             ->edit_column('tanggal', '$1', "show_date(tanggal)")

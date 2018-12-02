@@ -74,6 +74,26 @@
                     </div>
                 </div>
 <!--                <div class="form-group">-->
+<!--                    <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">kategori</label>-->
+<!--                    <div class="col-md-6 col-sm-6 col-xs-12">-->
+<!--                        <select class="custom-select d-block w-100" id="state" required="">-->
+<!--                            <option name="tkp">TKP</option>-->
+<!--                            <option name="twk">TWK</option>-->
+<!--                        </select>-->
+<!--                    </div>-->
+<!--                </div>-->
+                <div class="form-group">
+                    <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">kategori</label>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                <select id="heard" class="form-control" required="" name="kategori">
+                    <option value="">Choose..</option>
+                    <option value=twk name="twk">TWK</option>
+                    <option value="tiu" name="tiu">TIU</option>
+                    <option value="tkp" name="tkp">TKP</option>
+                </select>
+                    </div>
+                </div>
+<!--                <div class="form-group">-->
 <!--                    <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">No Telp. Pelanggan</label>-->
 <!--                    <div class="col-md-6 col-sm-6 col-xs-12">-->
 <!--                        <input value="--><?php //show_ifset($data->pelanggan_telepon); ?><!--"-->
